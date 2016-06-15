@@ -38,6 +38,15 @@ public class TextTabs extends AppCompatActivity {
         adapter = new TextTabsAdapter(getSupportFragmentManager(),fragmentList,titleList);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+        
+        setTabIcons();
+    }
+
+    private void setTabIcons() {
+        tabLayout.getTabAt(0).setIcon(R.drawable.facebook);
+        tabLayout.getTabAt(1).setIcon(R.drawable.googleplus);
+
+        tabLayout.getTabAt(2).setIcon(R.drawable.twitter);
     }
 
     private void initialise() {
