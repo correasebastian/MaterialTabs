@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MaterialTabs</string>
+    <string name="btnSimpleTab">Simple Tab</string>
+    <string name="textOne">One</string>
+    <string name="textTwo">Two</string>
+    <string name="textThree">Three</string>
+    <string name="textFour">Four</string>
+</resources>
