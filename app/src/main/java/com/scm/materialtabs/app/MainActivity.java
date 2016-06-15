@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.scm.materialtabs.R;
+import com.scm.materialtabs.tabs.IconTabs;
 import com.scm.materialtabs.tabs.TextTabs;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Toolbar toolbar;
     private Button btnSimpleTabs;
+    private Intent i;
+    private Button btnIconTabs;
 
 
     @Override
@@ -25,13 +28,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setSupportActionBar(toolbar);
 
         btnSimpleTabs = (Button) findViewById(R.id.btnSimpleTabs);
+        btnIconTabs = (Button) findViewById(R.id.btnIconTabs);
 
         btnSimpleTabs.setOnClickListener(this);
+        btnIconTabs.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        Intent i = new Intent(MainActivity.this,TextTabs.class);
+
+
+        switch (v.getId()){
+            case R.id.btnSimpleTabs:
+                i = new Intent(MainActivity.this,TextTabs.class);
+
+                break;
+            case R.id.btnIconTabs:
+                i= new Intent(MainActivity.this,IconTabs.class);
+
+                break;
+        }
         startActivity(i);
     }
 }

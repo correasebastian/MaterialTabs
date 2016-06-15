@@ -27,5 +27,12 @@
             android:id="@+id/btnSimpleTabs"
             android:text="@string/btnSimpleTab" />
 
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnIconTabs"
+            android:text="@string/btnIconTabs" />
+
     </LinearLayout>
 </RelativeLayout>
