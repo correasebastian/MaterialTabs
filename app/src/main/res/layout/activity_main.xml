@@ -34,5 +34,11 @@
             android:id="@+id/btnIconTabs"
             android:text="@string/btnIconTabs" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnScrollTabs"
+            android:text="@string/btnScrollTabs" />
+
     </LinearLayout>
 </RelativeLayout>

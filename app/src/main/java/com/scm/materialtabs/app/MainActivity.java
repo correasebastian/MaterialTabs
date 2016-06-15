@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.scm.materialtabs.R;
 import com.scm.materialtabs.tabs.IconTabs;
+import com.scm.materialtabs.tabs.ScrollTabs;
 import com.scm.materialtabs.tabs.TextTabs;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnSimpleTabs;
     private Intent i;
     private Button btnIconTabs;
+    private Button btnScrollTabs;
 
 
     @Override
@@ -27,11 +29,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toolbar= (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        initialise();
+        setListeners();
+
+
+    }
+
+    public void initialise(){
         btnSimpleTabs = (Button) findViewById(R.id.btnSimpleTabs);
         btnIconTabs = (Button) findViewById(R.id.btnIconTabs);
+        btnScrollTabs = (Button) findViewById(R.id.btnScrollTabs);
+    }
 
+
+    public void setListeners(){
         btnSimpleTabs.setOnClickListener(this);
         btnIconTabs.setOnClickListener(this);
+        btnScrollTabs.setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +59,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnIconTabs:
                 i= new Intent(MainActivity.this,IconTabs.class);
+
+                break;
+
+            case R.id.btnScrollTabs:
+                i= new Intent(MainActivity.this,ScrollTabs.class);
 
                 break;
         }

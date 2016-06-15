@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".tabs.TextTabs"></activity>
         <activity android:name=".tabs.IconTabs"></activity>
+        <activity android:name=".tabs.ScrollTabs"></activity>
     </application>
 
 </manifest>
